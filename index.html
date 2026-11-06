@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIVACY AWARE | Data Privacy Awareness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<section id="landingPage" class="landing-page">
+    <div class="cyber-background" aria-hidden="true">
+        <canvas id="binaryRain"></canvas>
+    </div>
+
+    <div class="landing-content">
+        <div class="landing-left">
+            <div class="brand-title">
+                <h1>
+                    <span class="brand-topline">
+                        <span>PRIVACY</span>
+                        <span class="eye-logo">
+                            <svg viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg" aria-label="privacy eye icon">
+                                <path d="M4 32.5C18 13 33 5 50 5S82 13 96 32.5C82 52 67 60 50 60S18 52 4 32.5Z" fill="white"/>
+                                <circle cx="50" cy="32.5" r="17" fill="black"/>
+                                <circle cx="50" cy="32.5" r="8" fill="white"/>
+                                <path d="M8 4L92 61" stroke="black" stroke-width="9" stroke-linecap="round"/>
+                                <path d="M8 4L92 61" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="brand-bottomline">AWARE</span>
+                </h1>
+            </div>
+
+            <p class="landing-tagline">LEARN. PROTECT. STAY SAFE.</p>
+            <p class="landing-description">Your personal information is valuable. Learn how to keep it protected in the digital world.</p>
+            <button class="get-started" onclick="showPrivacyAlert()">GET STARTED <span>→</span></button>
+        </div>
+
+        <!-- HACKER CHARACTER WITH ORBITING OBJECTS -->
+        <div class="landing-right hacker-scene">
+
+            <canvas id="heroBinaryRain" aria-hidden="true"></canvas>
+
+            <div class="hacker-orbit">
+
+                <!-- ORBITING FOLDERS -->
+                <div class="orbit-object orbit-folder folder-a">
+                    <svg viewBox="0 0 64 54" aria-hidden="true">
+                        <path d="M5 13A5 5 0 0 1 10 8H25L32 15H54A5 5 0 0 1 59 20V43A5 5 0 0 1 54 48H10A5 5 0 0 1 5 43Z"/>
+                        <path d="M5 20H59"/>
+                    </svg>
+                    <span>DATA FILE</span>
+                </div>
+
+                <div class="orbit-object orbit-folder folder-b">
+                    <svg viewBox="0 0 64 54" aria-hidden="true">
+                        <path d="M5 13A5 5 0 0 1 10 8H25L32 15H54A5 5 0 0 1 59 20V43A5 5 0 0 1 54 48H10A5 5 0 0 1 5 43Z"/>
+                        <path d="M5 20H59"/>
+                    </svg>
+                    <span>PRIVATE</span>
+                </div>
+
+                <div class="orbit-object orbit-folder folder-c">
+                    <svg viewBox="0 0 64 54" aria-hidden="true">
+                        <path d="M5 13A5 5 0 0 1 10 8H25L32 15H54A5 5 0 0 1 59 20V43A5 5 0 0 1 54 48H10A5 5 0 0 1 5 43Z"/>
+                        <path d="M5 20H59"/>
+                    </svg>
+                    <span>DATABASE</span>
+                </div>
+
+                <div class="orbit-object orbit-folder folder-d">
+                    <svg viewBox="0 0 64 54" aria-hidden="true">
+                        <path d="M5 13A5 5 0 0 1 10 8H25L32 15H54A5 5 0 0 1 59 20V43A5 5 0 0 1 54 48H10A5 5 0 0 1 5 43Z"/>
+                        <path d="M5 20H59"/>
+                    </svg>
+                    <span>USER DATA</span>
+                </div>
+
+                <!-- ORBITING ERROR SIGNS -->
+                <div class="orbit-object error-object error-a">
+                    <div class="error-symbol">!</div>
+                    <span>ACCESS DENIED</span>
+                </div>
+
+                <div class="orbit-object error-object error-b">
+                    <div class="error-symbol">×</div>
+                    <span>ERROR 404</span>
+                </div>
+
+                <div class="orbit-object error-object error-c">
+                    <div class="error-symbol">!</div>
+                    <span>WARNING</span>
+                </div>
+
+                <div class="orbit-object error-object error-d">
+                    <div class="error-symbol">×</div>
+                    <span>DATA BREACH</span>
+                </div>
+
+                <!-- CENTRAL HACKER -->
+                <div class="hacker-character">
+
+                    <div class="hacker-glow"></div>
+
+                    <div class="hacker-body">
+                        <div class="hacker-hood"></div>
+
+                        <div class="hacker-head">
+                            <div class="hacker-face">
+                                <div class="hacker-mask"></div>
+                                <div class="hacker-eye hacker-eye-left"></div>
+                                <div class="hacker-eye hacker-eye-right"></div>
+                            </div>
+                        </div>
+
+                        <div class="hacker-neck"></div>
+
+                        <div class="hacker-shoulders">
+                            <div class="hacker-jacket"></div>
+                            <div class="hacker-chest">
+                                <span>0101</span>
+                                <span>1010</span>
+                            </div>
+                        </div>
+
+                        <div class="hacker-laptop">
+                            <div class="laptop-screen">
+                                <div class="laptop-code">
+                                    <span>ACCESSING DATA...</span>
+                                    <span>01001010</span>
+                                    <span>01010101</span>
+                                    <span class="code-alert">ACCESS DENIED</span>
+                                    <span>SCANNING SYSTEM...</span>
+                                </div>
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
+                    </div>
+
+                    <div class="hacker-label">
+                        <span class="live-dot"></span>
+                        UNKNOWN USER DETECTED
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hacker-scene-caption">
+                <span class="caption-line"></span>
+                <span>SECURITY BREACH DETECTED</span>
+                <span class="caption-line"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="landing-footer">
+        <span>PRIVACY AWARE</span>
+        <span>YOUR DATA. YOUR RESPONSIBILITY.</span>
+    </div>
+</section>
+
+<!-- PRIVACY ALERT -->
+<div id="privacyAlert" class="alert-overlay" role="dialog" aria-modal="true" aria-labelledby="privacyAlertTitle">
+
+    <div class="alert-window">
+
+        <div class="alert-title">
+            <div class="alert-title-left">
+                <span class="alert-window-icon">!</span>
+                <span>SECURITY ALERT</span>
+            </div>
+
+            <button type="button" onclick="closeAlert()" aria-label="Close alert">×</button>
+        </div>
+
+        <div class="alert-content">
+
+            <div class="alert-icon-wrapper">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M32 5 59 54H5L32 5Z"/>
+                    <path d="M32 22V37"/>
+                    <circle cx="32" cy="46" r="2"/>
+                </svg>
+            </div>
+
+            <div class="alert-text-content">
+                <p class="alert-kicker">SYSTEM NOTIFICATION / 001</p>
+
+                <h4 id="privacyAlertTitle">PRIVACY AWARENESS REQUIRED</h4>
+
+                <p class="alert-message">
+                    Your personal information is valuable and needs protection.
+                    Before entering the digital world, learn how to recognize
+                    privacy risks, avoid online threats, and keep your data safe.
+                </p>
+            </div>
+
+            <div class="alert-warning-box">
+                <span class="warning-indicator"></span>
+                <div>
+                    <strong>IMPORTANT REMINDER</strong>
+                    <p>Think before you share. Protect your personal information.</p>
+                </div>
+            </div>
+
+            <div class="alert-info-line">
+                <span>SECURITY STATUS</span>
+                <strong><span class="alert-live-dot"></span> AWARENESS MODE</strong>
+            </div>
+
+            <button type="button" onclick="enterWebsite()" class="alert-enter-btn">
+                UNDERSTOOD, CONTINUE <span>→</span>
+            </button>
+
+            <small class="alert-footnote">
+                PRIVACY AWARE SYSTEM • EDUCATIONAL PURPOSES ONLY
+            </small>
+
+        </div>
+    </div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="homePage" class="home-page">
+
+    <header class="navbar">
+        <a href="#home" class="nav-brand">
+            <span>PRIVACY</span>
+            <svg viewBox="0 0 100 65">
+                <path d="M4 32.5C18 13 33 5 50 5S82 13 96 32.5C82 52 67 60 50 60S18 52 4 32.5Z" fill="white"/>
+                <circle cx="50" cy="32.5" r="17" fill="black"/>
+                <circle cx="50" cy="32.5" r="8" fill="white"/>
+                <path d="M8 4L92 61" stroke="black" stroke-width="9" stroke-linecap="round"/>
+                <path d="M8 4L92 61" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <span>AWARE</span>
+        </a>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search privacy topics...">
+            <button onclick="searchFeatures()">⌕</button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch theme">
+            <svg class="theme-icon theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+            <svg class="theme-icon theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z"/></svg>
+            <span id="themeLabel">LIGHT MODE</span>
+        </button>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="navLinks">
+            <a href="#home" class="active">HOME</a>
+            <a href="#features">DETAILS</a>
+            <a href="#dataAct">RA 10173</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#mysteryGame">MYSTERY GAME</a>
+            <a href="#references">REFERENCES</a>
+        </nav>
+
+        <button class="logout-btn" type="button" onclick="logoutWebsite()">LOG OUT <span></span></button>
+    </header>
+
+    <!-- HOME / FOLDER SECTION -->
+    <section id="home" class="home-section">
+        <div class="home-heading">
+            <p>WELCOME TO</p>
+            <h1>PRIVACY AWARE</h1>
+            <span>EXPLORE. LEARN. PROTECT YOUR DIGITAL WORLD.</span>
+        </div>
+
+        <div class="folder-stage">
+            <div class="folder-orbit" id="folderOrbit">
+
+                <button class="folder-item folder-one" onclick="openFeature(0)" data-name="Personal Data Protection Tips">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Personal Data<br>Protection Tips</span>
+                </button>
+
+                <button class="folder-item folder-two" onclick="openFeature(1)" data-name="Privacy Policy Guide">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Privacy Policy<br>Guide</span>
+                </button>
+
+                <button class="folder-item folder-three" onclick="openFeature(2)" data-name="Data Privacy Act of 2012">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Data Privacy Act<br>RA 10173</span>
+                </button>
+
+                <button class="folder-item folder-four" onclick="openFeature(3)" data-name="Sample Privacy Notice">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Sample Privacy<br>Notice</span>
+                </button>
+
+                <button class="folder-item folder-five" onclick="openFeature(4)" data-name="Interactive Privacy Awareness Quiz">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Privacy Awareness<br>Quiz</span>
+                </button>
+
+                <button class="folder-item folder-six" onclick="openFeature(5)" data-name="Phishing and Scam Awareness">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Phishing and<br>Scam Awareness</span>
+                </button>
+
+                <button class="folder-item folder-seven" onclick="openFeature(6)" data-name="Security Guides">
+                    <span class="folder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 13.5A3.5 3.5 0 0 1 8.5 10H19l4 4h16.5A3.5 3.5 0 0 1 43 17.5v18a3.5 3.5 0 0 1-3.5 3.5h-31A3.5 3.5 0 0 1 5 35.5z"/><path d="M5 19h38"/></svg></span>
+                    <span>Security Guides</span>
+                </button>
+            </div>
+
+            <!-- STATIONARY PHONE -->
+            <div class="phone-container">
+                <div class="phone">
+                    <div class="phone-camera"></div>
+                    <div class="phone-screen">
+                        <div class="phone-screen-content">
+                            <div class="phone-logo">PRIVACY <span>◉</span> AWARE</div>
+                            <div class="phone-shield"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 40 10v12c0 10-6.8 17.5-16 22C14.8 39.5 8 32 8 22V10z"/><path d="m17 24 5 5 10-11"/></svg></div>
+                            <h3>YOUR PRIVACY</h3>
+                            <p>STARTS WITH YOU.</p>
+                            <div class="phone-line"></div>
+                            <div class="phone-status"><span>●</span> DATA PROTECTION ACTIVE</div>
+                        </div>
+                    </div>
+                    <div class="phone-bottom"></div>
+                </div>
+                <div class="phone-glow"></div>
+            </div>
+        </div>
+
+        <div class="home-instruction">
+            <span>✦</span>
+            CLICK A FOLDER TO EXPLORE ITS CONTENT
+            <span>✦</span>
+        </div>
+    </section>
+
+    <!-- FEATURE DETAILS -->
+    <section id="features" class="content-section">
+        <div class="section-heading">
+            <p>EXPLORE OUR COLLECTION</p>
+            <h1>DATA PRIVACY DETAILS</h1>
+            <span>Learn the basics of keeping your information safe.</span>
+        </div>
+
+        <div class="feature-grid" id="featureGrid">
+            <div class="feature-card" onclick="openFeature(0)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 40 10v12c0 10-6.8 17.5-16 22C14.8 39.5 8 32 8 22V10z"/><path d="m17 24 5 5 10-11"/></svg></div>
+                <h3>Personal Data Protection Tips</h3>
+                <p>Learn practical ways to protect your personal information online.</p>
+                <button>EXPLORE →</button>
+            </div>
+
+            <div class="feature-card" onclick="openFeature(1)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 4h16l8 8v32H13z"/><path d="M29 4v9h8M19 22h12M19 29h12M19 36h8"/></svg></div>
+                <h3>Privacy Policy Guide</h3>
+                <p>Understand privacy policies and how organizations use your data.</p>
+                <button>EXPLORE →</button>
+            </div>
+
+            <div class="feature-card" onclick="openFeature(2)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 43 39H5z"/><path d="M24 16v11m0 6v.5"/></svg></div>
+                <h3>Data Privacy Act of 2012</h3>
+                <p>Discover the importance of Republic Act No. 10173.</p>
+                <button>EXPLORE →</button>
+            </div>
+
+            <div class="feature-card" onclick="openFeature(3)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="3"/><path d="M16 15h16M16 23h16M16 31h10"/></svg></div>
+                <h3>Sample Privacy Notice</h3>
+                <p>See an example of how personal information is collected and used.</p>
+                <button>EXPLORE →</button>
+            </div>
+
+            <div class="feature-card" onclick="openFeature(4)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M18 18a6 6 0 1 1 10 4c-3 2-4 3-4 6m0 6v.5"/></svg></div>
+                <h3>Interactive Privacy Awareness Quiz</h3>
+                <p>Test your knowledge about privacy and online safety.</p>
+                <button>TAKE QUIZ →</button>
+            </div>
+
+            <div class="feature-card" onclick="openFeature(5)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 8h38v26H20l-10 8v-8H5z"/><path d="m17 17 14 10m0-10L17 27"/></svg></div>
+                <h3>Phishing and Scam Awareness</h3>
+                <p>Identify suspicious messages, fake websites, and online scams.</p>
+                <button>EXPLORE →</button>
+            </div>
+
+            <div class="feature-card" onclick="openFeature(6)">
+                <div class="feature-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="5" width="30" height="38" rx="4"/><path d="M17 12h14M17 19h14M17 26h8M20 36h8"/></svg></div>
+                <h3>Security Guides</h3>
+                <p>Discover simple practices to keep your accounts and devices secure.</p>
+                <button>EXPLORE →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATA PRIVACY ACT -->
+    <section id="dataAct" class="content-section data-act-section">
+        <div class="section-heading">
+            <p>KNOW YOUR RIGHTS</p>
+            <h1>DATA PRIVACY ACT OF 2012</h1>
+            <span>Republic Act No. 10173</span>
+        </div>
+
+        <div class="act-container">
+            <div class="act-box">
+                <div class="act-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 40 10v12c0 10-6.8 17.5-16 22C14.8 39.5 8 32 8 22V10z"/><path d="m17 24 5 5 10-11"/></svg></div>
+                <h2>What is RA 10173?</h2>
+                <p>The Data Privacy Act of 2012 is a Philippine law that protects the fundamental human right to privacy of communication while ensuring the free flow of information for innovation and growth.</p>
+                <p>It regulates how personal information is collected, stored, processed, used, and shared by organizations and individuals covered by the law.</p>
+            </div>
+
+            <div class="act-box">
+                <div class="act-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v34M12 12h24M8 42h32"/><path d="m12 12-8 15h16zM36 12l-8 15h16z"/></svg></div>
+                <h2>Why is it important?</h2>
+                <ul>
+                    <li>Protects personal information.</li>
+                    <li>Promotes responsible data handling.</li>
+                    <li>Helps prevent unauthorized access.</li>
+                    <li>Encourages transparency and accountability.</li>
+                    <li>Provides rights to data subjects.</li>
+                </ul>
+            </div>
+
+            <div class="act-box">
+                <div class="act-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="14" r="7"/><path d="M9 42c1-10 6-15 15-15s14 5 15 15"/></svg></div>
+                <h2>Your Data Privacy Rights</h2>
+                <ul>
+                    <li>Right to be informed.</li>
+                    <li>Right to access.</li>
+                    <li>Right to object.</li>
+                    <li>Right to erasure or blocking, subject to legal conditions.</li>
+                    <li>Right to damages.</li>
+                    <li>Right to file a complaint.</li>
+                    <li>Right to data portability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="act-source">
+            Learn more from the
+            <a href="https://privacy.gov.ph/data-privacy-act/" target="_blank">
+                National Privacy Commission
+            </a>.
+        </div>
+    </section>
+
+    <!-- PRIVACY QUIZ -->
+    <section id="quiz" class="content-section quiz-section">
+        <div class="section-heading">
+            <p>TEST YOUR KNOWLEDGE</p>
+            <h1>PRIVACY AWARENESS QUIZ</h1>
+            <span>Choose the correct answer and see how privacy-aware you are.</span>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-top">
+                <span id="quizProgress">QUESTION 1 OF 5</span>
+                <span id="quizScore">SCORE: 0</span>
+            </div>
+            <div class="quiz-progress-bar"><div id="quizProgressFill"></div></div>
+            <h2 id="quizQuestion">Loading question...</h2>
+            <div id="quizAnswers" class="quiz-answers"></div>
+            <p id="quizFeedback"></p>
+            <button id="nextQuestion" onclick="nextQuizQuestion()" disabled>NEXT QUESTION →</button>
+            <div id="quizFinal"></div>
+        </div>
+    </section>
+
+    <!-- MYSTERY GAME -->
+    <section id="mysteryGame" class="content-section mystery-section">
+        <button class="back-home-btn" onclick="backToHome()">← BACK TO HOME</button>
+
+        <div class="section-heading">
+            <p>PRIVACY AWARE INVESTIGATION UNIT</p>
+            <h1>THE MISSING DATA</h1>
+            <span>Choose a case, inspect the evidence, and solve the privacy mystery.</span>
+        </div>
+
+        <div class="case-select-grid" id="caseSelectGrid">
+            <button class="case-select-card" onclick="selectMysteryCase(0)">
+                <span class="case-number">CASE FILE #001</span>
+                <span class="case-card-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="3"/><path d="m6 12 18 14 18-14"/></svg></span>
+                <strong>THE COMPROMISED STUDENT ACCOUNT</strong>
+                <small>Investigate a suspicious email and a stolen school login.</small>
+                <span class="case-open">OPEN CASE →</span>
+            </button>
+
+            <button class="case-select-card" onclick="selectMysteryCase(1)">
+                <span class="case-number">CASE FILE #002</span>
+                <span class="case-card-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="15" r="8"/><path d="M8 42c1-10 6-16 16-16s15 6 16 16"/></svg></span>
+                <strong>THE OVERSHARED PROFILE</strong>
+                <small>Find out how a public social media post exposed private details.</small>
+                <span class="case-open">OPEN CASE →</span>
+            </button>
+
+            <button class="case-select-card" onclick="selectMysteryCase(2)">
+                <span class="case-number">CASE FILE #003</span>
+                <span class="case-card-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="3" width="22" height="42" rx="4"/><path d="M20 9h8M21 38h6"/></svg></span>
+                <strong>THE LOST DEVICE</strong>
+                <small>Investigate a missing phone and an account accessed by someone else.</small>
+                <span class="case-open">OPEN CASE →</span>
+            </button>
+        </div>
+
+        <div class="mystery-container" id="mysteryPlayArea" style="display:none;">
+            <div class="mystery-story">
+                <div class="mystery-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 44 41H4z"/><path d="M24 17v11m0 6v.5"/></svg></div>
+                <p class="case-label" id="activeCaseLabel">CLASSIFIED CASE FILE #001</p>
+                <h2 id="activeCaseTitle">The Compromised Student Account</h2>
+                <p id="activeCaseStory">Select a case to begin.</p>
+                <p id="activeCaseMissionText">Investigate the evidence and discover what happened.</p>
+
+                <div class="mission-details">
+                    <p><span>MISSION:</span> <span id="activeMission">Identify the privacy risk.</span></p>
+                    <p><span>DIFFICULTY:</span> <span id="activeDifficulty">INTERMEDIATE</span></p>
+                    <p><span>EVIDENCE:</span> <span>03 FILES</span></p>
+                </div>
+
+                <button class="red-game-btn" onclick="startMystery()">START INVESTIGATION →</button>
+                <button class="case-back-btn" onclick="backToCaseSelection()">← BACK TO CASE FILES</button>
+            </div>
+
+            <div class="mystery-terminal">
+                <div class="terminal-top">
+                    <span>● CASE TERMINAL</span>
+                    <span id="caseStatus">STATUS: LOCKED</span>
+                </div>
+
+                <div id="gameIntro">
+                    <div class="lock-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="21" width="32" height="23" rx="4"/><path d="M15 21v-8a9 9 0 0 1 18 0v8m-9 9v6"/></svg></div>
+                    <h2>CLASSIFIED FILE</h2>
+                    <p>Start the investigation to access the evidence.</p>
+                </div>
+
+                <div id="gameContent" style="display:none;">
+                    <div class="game-progress">
+                        <span>CLUES COLLECTED</span>
+                        <span id="clueCounter">0 / 3</span>
+                    </div>
+                    <div class="clue-progress-bar"><div id="clueProgressFill"></div></div>
+                    <h3 id="clueTitle">INVESTIGATE THE CLUES</h3>
+                    <p id="clueDescription">Click each evidence file to reveal the hidden information.</p>
+
+                    <div class="clue-list">
+                        <button onclick="revealClue(0)" id="clue0"><span>01</span> EVIDENCE FILE 01 <small>CLICK TO OPEN FILE</small></button>
+                        <button onclick="revealClue(1)" id="clue1"><span>02</span> EVIDENCE FILE 02 <small>CLICK TO OPEN FILE</small></button>
+                        <button onclick="revealClue(2)" id="clue2"><span>03</span> EVIDENCE FILE 03 <small>CLICK TO OPEN FILE</small></button>
+                    </div>
+
+                    <div id="clueResult"></div>
+
+                    <div id="suspectChoices" style="display:none;">
+                        <h3 id="attackQuestionTitle">IDENTIFY THE PRIVACY RISK</h3>
+                        <p id="attackQuestion">What happened in this case?</p>
+                        <div id="suspectOptions"></div>
+                    </div>
+
+                    <div id="finalDecision" style="display:none;">
+                        <h3>FINAL DECISION</h3>
+                        <p id="decisionQuestion">What is the safest action?</p>
+                        <div id="decisionOptions"></div>
+                    </div>
+
+                    <div id="gameResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY REMINDERS -->
+    <section class="content-section reminder-section">
+        <div class="section-heading">
+            <p>REMEMBER THESE</p>
+            <h1>STAY SAFE ONLINE</h1>
+            <span>Small actions can make a big difference in protecting your privacy.</span>
+        </div>
+
+        <div class="reminder-grid">
+            <div class="reminder-card">
+                <span class="reminder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="21" width="30" height="23" rx="4"/><path d="M15 21v-8a9 9 0 0 1 18 0v8m-9 9v6"/></svg></span>
+                <h3>Strong Passwords</h3>
+                <p>Use unique and strong passwords for your accounts.</p>
+            </div>
+
+            <div class="reminder-card">
+                <span class="reminder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 8h38v26H20l-10 8v-8H5z"/><path d="m17 17 14 10m0-10L17 27"/></svg></span>
+                <h3>Think Before You Click</h3>
+                <p>Always check links before opening them.</p>
+            </div>
+
+            <div class="reminder-card">
+                <span class="reminder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 40 10v12c0 10-6.8 17.5-16 22C14.8 39.5 8 32 8 22V10z"/><path d="m17 24 5 5 10-11"/></svg></span>
+                <h3>Protect Your Information</h3>
+                <p>Avoid sharing sensitive personal information publicly.</p>
+            </div>
+
+            <div class="reminder-card">
+                <span class="reminder-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="3" width="22" height="42" rx="4"/><path d="M20 9h8M21 38h6"/></svg></span>
+                <h3>Secure Your Devices</h3>
+                <p>Keep your software and applications updated.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section id="references" class="content-section references-section">
+        <div class="section-heading">
+            <p>LEARN FROM TRUSTED SOURCES</p>
+            <h1>REFERENCES</h1>
+            <span>Official resources used for the data privacy information on this website.</span>
+        </div>
+
+        <div class="references-list">
+            <article class="reference-item">
+                <span class="reference-number">01</span>
+                <div>
+                    <h3>Republic Act No. 10173 – Data Privacy Act of 2012</h3>
+                    <p>Official Gazette of the Republic of the Philippines. The full text of the Data Privacy Act of 2012.</p>
+                    <a href="https://officialgazette.gov.ph/2012/08/15/republic-act-no-10173/" target="_blank" rel="noopener noreferrer">View official law ↗</a>
+                </div>
+            </article>
+
+            <article class="reference-item">
+                <span class="reference-number">02</span>
+                <div>
+                    <h3>Data Privacy Act of 2012</h3>
+                    <p>National Privacy Commission. Information about the law and its provisions.</p>
+                    <a href="https://privacy.gov.ph/data-privacy-act/" target="_blank" rel="noopener noreferrer">Visit National Privacy Commission ↗</a>
+                </div>
+            </article>
+
+            <article class="reference-item">
+                <span class="reference-number">03</span>
+                <div>
+                    <h3>Rights of Data Subjects</h3>
+                    <p>National Privacy Commission. A guide to the rights of individuals whose personal information is processed.</p>
+                    <a href="https://privacy.gov.ph/data-subject-rights/" target="_blank" rel="noopener noreferrer">Read about data subject rights ↗</a>
+                </div>
+            </article>
+
+            <article class="reference-item">
+                <span class="reference-number">04</span>
+                <div>
+                    <h3>Data Privacy Resources</h3>
+                    <p>Department of Justice. Government references related to data privacy, including the Data Privacy Act and its implementing rules.</p>
+                    <a href="https://www.doj.gov.ph/md_data_privacy.html" target="_blank" rel="noopener noreferrer">View DOJ resources ↗</a>
+                </div>
+            </article>
+        </div>
+
+        <p class="references-note">Accessed for educational and informational purposes. Please refer to the official sources for the complete and updated legal information.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-brand">PRIVACY <span>◉</span> AWARE</div>
+        <p>LEARN. PROTECT. STAY SAFE.</p>
+        <p>A Data Privacy Awareness Website for educational purposes.</p>
+
+        <div class="footer-links">
+            <a href="#home">HOME</a>
+            <a href="#features">FEATURES</a>
+            <a href="#dataAct">RA 10173</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#mysteryGame">MYSTERY GAME</a>
+        </div>
+
+        <p class="copyright">© 2026 PRIVACY AWARE. ALL RIGHTS RESERVED.</p>
+    </footer>
+</div>
+
+<!-- FEATURE MODAL -->
+<div id="featureModal" class="feature-modal">
+    <div class="feature-modal-box">
+        <button class="modal-close" onclick="closeFeature()">×</button>
+        <div class="modal-symbol" id="modalSymbol"></div>
+        <p class="modal-label">PRIVACY AWARE LEARNING CENTER</p>
+        <h2 id="modalTitle">FEATURE TITLE</h2>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
